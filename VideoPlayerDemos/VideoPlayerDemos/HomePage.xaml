@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:VideoPlayerDemos"
+             x:Class="VideoPlayerDemos.HomePage"
+             Title="Lab4 Video Player"
+             Padding="10">
+    <TableView Intent="Menu">
+        <TableRoot>
+            <TableSection>
+                <TextCell Text="Select Web Video" 
+                          Detail="Select a video from a ListView"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:SelectWebVideoPage}" />
+                
+                <TextCell Text="Play video from list"
+                          Detail="Select a video from a list to show"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:BindToVideoPlayerPage}" />
+
+                <TextCell Text="Play Library Video"
+                          Detail="Play a video from the videos library"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:PlayLibraryVideoPage}" />
+            </TableSection>
+        </TableRoot>
+    </TableView>
+</ContentPage>
